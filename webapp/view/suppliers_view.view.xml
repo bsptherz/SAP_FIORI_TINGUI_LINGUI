@@ -1,0 +1,72 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    controllerName="app01.controller.home_view"
+>
+    <Page
+        id="_IDGenPage3"
+        title="{i18n>title}"
+    >
+        <tnt:ToolHeader id="_IDGentoolHeader4">
+            <Button
+                id="_IDGenButton6"
+                icon="sap-icon://menu2"
+                type="Transparent"
+            />
+            <ToolbarSpacer id="_IDGenSpacer6" />
+            <Text
+                id="_IDGentext5"
+                text="Suppliers"
+            />
+            <ToolbarSpacer id="_IDGenSpacer7" />
+            <Button
+                id="_IDGenButton7"
+                text="{oUserModel>/username}"
+                type="Transparent"
+                press=".profile_dropdown"
+            />
+        </tnt:ToolHeader>
+
+        <Text
+            id="_IDGenText10"
+            text="{oUserModel>/password}"
+        />
+
+        <List
+            noDataText="Drop list items here"
+            id="list0"
+            items="{ path: '/businessPartnersSet' }"
+        >
+            <items>
+                <StandardListItem
+                    type="Navigation"
+                    icon="sap-icon://picture"
+                    id="item0"
+                    title="{Name}"
+                    description="Supplier code: {Supplier}"
+                />
+            </items>
+        </List>
+
+        <footer>
+            <Bar id="_IDGenBar3">
+                <contentLeft>
+                    <Text
+                        id="_IDGenText8"
+                        text="halvmcd@gmail.com"
+                    />
+                </contentLeft>
+
+                <contentRight>
+                    <Text
+                        id="_IDGenText9"
+                        text="egotherz"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
+        <content />
+    </Page>
+</mvc:View>

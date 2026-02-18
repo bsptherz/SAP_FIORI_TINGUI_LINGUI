@@ -1,0 +1,89 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    controllerName="app01.controller.home_view"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <tnt:ToolHeader id="_IDGentoolHeader1">
+            <Button
+                id="_IDGenButton1"
+                icon="sap-icon://menu2"
+                type="Transparent"
+            />
+            <ToolbarSpacer id="_IDGenSpacer1" />
+            <Text
+                id="_IDGentext2"
+                text="Login Page"
+            />
+            <ToolbarSpacer id="_IDGenSpacer2" />
+            <Button
+                id="_IDGenButton2"
+                text="Hi, Admin"
+                type="Transparent"
+            />
+        </tnt:ToolHeader>
+        <content>
+            <VBox
+                id="_IDGenVBox"
+                class="custform"
+                fitContainer="true"
+            >
+                <form:SimpleForm
+                    id="_IDGenSimpleForm1"
+                    title="Login"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                >
+                    <Label
+                        id="_IDGenLabelUser"
+                        text="Username"
+                    />
+                    <Input
+                        id="_IDGenInputUser"
+                        placeholder="Enter your user name"
+                    />
+                    <Label
+                        id="_IDGenLabelPass"
+                        text="Password"
+                    />
+                    <Input
+                        id="_IDGenInputPass"
+                        placeholder="Enter your password"
+                        type="Password"
+                    />
+                    <Button
+                        id="_IDGenButton"
+                        text="Login"
+                        type="Emphasized"
+                        press="onPressLogin()"
+                    />
+                </form:SimpleForm>
+            </VBox>
+        </content>
+
+
+
+        <footer>
+            <Bar id="_IDGenBar1">
+                <contentLeft>
+                    <Text
+                        id="_IDGenText4"
+                        text="halvmcd@gmail.com"
+                    />
+                </contentLeft>
+
+                <contentRight>
+                    <Text
+                        id="_IDGenText5"
+                        text="egotherz"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
